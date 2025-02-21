@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Common CSS Start */
+
+*{
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", serif;
+  font-weight:500;
+  
+}
+body{
+  line-height: 1.6rem;
+}
+/* Common CSS End */
+
+/* Header CSS Start*/
+
+ /* -->  Hero Section */
+.hero-section {
+  background:url('asset/images/img-bg.jpg') center/cover no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('asset/images/matebg.png') center/cover no-repeat;
+  opacity: 0.6; 
+}
+
+/* Hero Content */
+.hero-content {
+  text-align: center;
+  color: white;
+  width: 100%;
+  padding: 50px 0;
+}
+.branding {
+  height: 60px; /* Adjust height as needed */
+  width: auto; /* Maintain aspect ratio */
+ 
+  border-radius: 8px; 
+}
+/* Header CSS End*/
+
+
+/* Navigation  CSS Start*/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar-togller{
+  border: 1px solid #d7771d;
+}
+
+.navbar.scrolled {
+  background-color: white !important;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+.navbar.scrolled .nav-link{
+  color: black;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #d7771d !important; /* Keeps hover effect */
+}
+.navbar-nav .nav-link {
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d7771d;
+  text-decoration: underline;
+}
+.dropdown-item:hover{
+  background: linear-gradient(to right, rgba(166, 208, 51, 0.68), rgba(47, 198, 254, 0.74));
+}
+
+.navbar-brand img {
+  transition: opacity 0.3s ease-in-out;
+  height: 60px;
+}
+
+.navbar-brand {
+  position: relative;
+}
+
+.navbar-brand .scrolled-logo {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+ 
+}
+
+.navbar.scrolled .navbar-brand .default-logo {
+  opacity: 0;
+}
+
+.navbar.scrolled .navbar-brand .scrolled-logo {
+  opacity: 1;
+}
+
+/* Scroll */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px   #00F260;
+  border-radius: 6px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background:#feba05; */
+  -webkit-border-radius: 6px;
+    border-radius: 6px;
+    background: #00F260;
+    background: -webkit-linear-gradient(to bottom, #fea400, #00F260);
+    background: linear-gradient(to bottom, #fea400, #00F260);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+} 
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(215,Â 62,Â 2);
+}
+/* Navigation  CSS End*/
+
+
+/* Pages/Section CSS Strat  */
+
+/* ---> Key Offerings Section */
+.key-offering {
+  background-color: #fff;
+  padding: 80px 0%;
+  text-align: center;
+}
+.key-offering h1 {
+  text-align: center;
+  /* Space below heading */
+}
+.key-heading span{
+  color: #666;
+}
+/* Section Heading */
+.section-heading {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-heading::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #333;
+  margin: 10px auto 0;
+}
+
+/* Row Gap */
+.key-offering .row {
+  row-gap: 100px;
+}
+
+/* Offer Images */
+.offer-img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+/* Parent container for the hover effect */
+.offer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* transition: transform 0.4s ease-in-out; */
+  transition: all 0.5s cubic-bezier(0, 0, 0.23, 1);
+  background-position: 0%;
+}
+/* 
+Add hover effect on the parent container */
+.offer-item:hover {
+  transform: scale(1.05); 
+} 
+
+/* Image styles */
+.offer-img {
+  width: 70px;
+  height: auto;
+  margin-bottom: 15px;
+  transition: border 0.4s ease-in-out, transform 0.4s ease-in-out;
+  border: 1px solid transparent;
+}
+
+/* Add border and slight zoom for the image on hover */
+.offer-item:hover .offer-img {
+  border: 1px solid #ff9b20;
+  /* padding: 10px 10px; */
+  /* transform: scale(1.1); Zoom-in effect */
+}
+
+/* Text styles */
+.offer-text {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  margin: 0;
+  transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out;
+}
+
+/* Fade-in effect for text */
+.offer-item:hover .offer-text {
+  opacity: 1;
+  color: #ff9b20; /* Change color on hover */
+}
+ 
+
+
+/* Client Section CSS Start */
+#testimonial__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+.clientssec {
+  position: relative;
+  overflow: hidden;
+  background:rgba(0, 0, 0, 0.8)center/cover no-repeat; /* Replace with a valid image */
+  height: 60vh;
+}
+
+
+.owl-carousel .item{
+  margin-bottom: 20px;
+}
+
+.owl-carousel .item img {
+  max-width: 100%;
+  height: 108px;
+  display: block;
+ 
+}
+
+
+/* Client Section CSS End */
+
+
+.what-makes-us-different {
+  background: url('/asset/images/makeusdiifferenrt.png') no-repeat center center/cover;
+  position: relative;
+  background-attachment: fixed;
+  padding: 80px 0;
+ 
+}
+
+.what-makes-us-different::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65); /* Dark overlay */
+}
+
+.what-makes-us-different .container {
+  position: relative;
+  z-index: 2;
+}
+
+.content-box {
+  padding: 20px;
+  border-radius: 10px;
+
+}
+
+
+.content-box img {
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes slide-animation {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+.dash {
+  display: inline-block; /* Makes it behave like a block element but inline */
+  border-bottom: 2px solid rgba(100, 100, 102, 0.41);
+  padding: 0 50px;
+  margin-top: 10px; /* Space above */
+  margin-bottom: 10px; /* Space below */
+  width: fit-content; /* Ensures the underline fits the content */
+}
+
+
+
+
+@media (max-width: 992px) {
+  .navbar-toggler {
+    border: 2px solid #d7771d!important;
+    padding: 5px; /* Optional: Adjust padding for better spacing */
+  }
+
+  .navbar-toggler-icon {
+    background-image: none !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+  }
+
+  .navbar-toggler-icon span {
+    display: block;
+    width: 100%;
+    height: 1.4px;
+    background-color:#d7771d; /* Change line color */
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+
+
+.connect-with-us {
+  background: linear-gradient(to right, #719C2C, #2EA8C4);
+  color: white;
+  min-height: 200px;
+  padding: 50px 20px;
+}
+
+
+/* Pause animation on hover */
+
+
+.about-us {
+  background-image: linear-gradient(to bottom, rgba(66, 73, 91, 0.94), rgba(99, 99, 99, 0.94)), url("asset/images/footerbg.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Optional: Adjust as needed */
+  background-attachment: fixed;
+  position: relative;
+  min-height: 400px;
+  padding: 50px 0;
+}
+
+
+.iso-logo {
+  max-width: 150px;
+  margin-top: 20px;
+}
+
+.list-unstyled li {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+
+.flag {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.contact-list li {
+  margin-bottom: 15px;
+}
+
+
+
+/* Pages/Section CSS End */
+
+
+/* Footer CSS Start */
+.footer ul li a{
+  color:#ffffff;
+}
+.footer ul li a:hover{
+  color: #f4b400;
+}
+
+/* .footer {
+  background-color: #1c1f26;
+  padding: 10px 0%;
+  text-align: center;
+} */
+
+
+
+.social-icons a  {
+
+  
+  transition: 0.5s;
+}
+
+.social-icons a :hover {
+  color:#1358cf;
+}
+/* Footer CSS End */
+
+
+
+
+
+
+
+
+
+
+
