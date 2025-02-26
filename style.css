@@ -1,31 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-/* Common CSS Start */
-
-*{
-  margin: 0%;
-  padding: 0%;
+/* Common CSS */
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Montserrat", serif;
-  font-weight:500;
-  
 }
-body{
+
+body {
   line-height: 1.6rem;
+  overflow-x: hidden;
 }
-/* Common CSS End */
 
-/* Header CSS Start*/
-
- /* -->  Hero Section */
+/* Header Hero Section */
 .hero-section {
-  background:url('asset/images/img-bg.jpg') center/cover no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
+  background: url('asset/images/brand/img-bg.jpg') center/cover no-repeat;
 }
 
 .hero-section::after {
@@ -35,28 +26,34 @@ body{
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('asset/images/matebg.png') center/cover no-repeat;
-  opacity: 0.6; 
+  background: url('asset/images/brand/matebg.png') center/cover no-repeat;
+  opacity: 0.6;
 }
 
-/* Hero Content */
 .hero-content {
   text-align: center;
   color: white;
   width: 100%;
   padding: 50px 0;
 }
-.branding {
-  height: 60px; /* Adjust height as needed */
-  width: auto; /* Maintain aspect ratio */
- 
-  border-radius: 8px; 
-}
-/* Header CSS End*/
 
+.branding {
+  height: 60px;
+  border-radius: 8px;
+}
+
+.content-hero-slide {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 /* Navigation  CSS Start*/
-
 .navbar {
   position: fixed;
   top: 0;
@@ -65,6 +62,7 @@ body{
   background: transparent;
   transition: background-color 0.3s ease-in-out;
 }
+
 .navbar-togller{
   border: 1px solid #d7771d;
 }
@@ -111,8 +109,6 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-
- 
 }
 
 .navbar.scrolled .navbar-brand .default-logo {
@@ -122,13 +118,10 @@ body{
 .navbar.scrolled .navbar-brand .scrolled-logo {
   opacity: 1;
 }
-
 /* Scroll */
-/* width */
 ::-webkit-scrollbar {
   width: 10px;  
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px   #00F260;
@@ -152,27 +145,16 @@ body{
 }
 /* Navigation  CSS End*/
 
-
-/* Pages/Section CSS Strat  */
-
-/* ---> Key Offerings Section */
+/* Key Offerings */
 .key-offering {
   background-color: #fff;
-  padding: 80px 0%;
+  padding: 80px 0;
   text-align: center;
 }
-.key-offering h1 {
-  text-align: center;
-  /* Space below heading */
-}
-.key-heading span{
-  color: #666;
-}
-/* Section Heading */
+
 .section-heading {
   font-size: 28px;
   font-weight: bold;
-  text-align: center;
   margin-bottom: 30px;
   position: relative;
   display: inline-block;
@@ -187,33 +169,6 @@ body{
   margin: 10px auto 0;
 }
 
-/* Row Gap */
-.key-offering .row {
-  row-gap: 100px;
-}
-
-/* Offer Images */
-.offer-img {
-  width: 80px;
-  height: auto;
-  margin-bottom: 15px;
-}
-/* Parent container for the hover effect */
-.offer-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* transition: transform 0.4s ease-in-out; */
-  transition: all 0.5s cubic-bezier(0, 0, 0.23, 1);
-  background-position: 0%;
-}
-/* 
-Add hover effect on the parent container */
-.offer-item:hover {
-  transform: scale(1.05); 
-} 
-
-/* Image styles */
 .offer-img {
   width: 70px;
   height: auto;
@@ -222,14 +177,10 @@ Add hover effect on the parent container */
   border: 1px solid transparent;
 }
 
-/* Add border and slight zoom for the image on hover */
 .offer-item:hover .offer-img {
   border: 1px solid #ff9b20;
-  /* padding: 10px 10px; */
-  /* transform: scale(1.1); Zoom-in effect */
 }
 
-/* Text styles */
 .offer-text {
   font-size: 14px;
   font-weight: bold;
@@ -239,54 +190,32 @@ Add hover effect on the parent container */
   transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out;
 }
 
-/* Fade-in effect for text */
 .offer-item:hover .offer-text {
-  opacity: 1;
-  color: #ff9b20; /* Change color on hover */
+  color: #ff9b20;
 }
  
-
-
 /* Client Section CSS Start */
 #testimonial__video {
   position: absolute;
   top: 0;
   left: 0;
+  height: max-content;
   width: 100%;
   object-fit: cover;
   z-index: -1;
 }
-
-
 .clientssec {
   position: relative;
   overflow: hidden;
   background:rgba(0, 0, 0, 0.8)center/cover no-repeat; /* Replace with a valid image */
-  height: 60vh;
+  
 }
-
-
-.owl-carousel .item{
-  margin-bottom: 20px;
-}
-
-.owl-carousel .item img {
-  max-width: 100%;
-  height: 108px;
-  display: block;
- 
-}
-
-
 /* Client Section CSS End */
-
-
 .what-makes-us-different {
-  background: url('/asset/images/makeusdiifferenrt.png') no-repeat center center/cover;
+  background: url('/asset/images/brand/makeusdiifferenrt.png') no-repeat center center/cover;
   position: relative;
   background-attachment: fixed;
   padding: 80px 0;
- 
 }
 
 .what-makes-us-different::before {
@@ -321,17 +250,6 @@ Add hover effect on the parent container */
   to { transform: translateX(-100%); }
 }
 
-.dash {
-  display: inline-block; /* Makes it behave like a block element but inline */
-  border-bottom: 2px solid rgba(100, 100, 102, 0.41);
-  padding: 0 50px;
-  margin-top: 10px; /* Space above */
-  margin-bottom: 10px; /* Space below */
-  width: fit-content; /* Ensures the underline fits the content */
-}
-
-
-
 
 @media (max-width: 992px) {
   .navbar-toggler {
@@ -357,21 +275,15 @@ Add hover effect on the parent container */
   }
 }
 
-
-
 .connect-with-us {
   background: linear-gradient(to right, #719C2C, #2EA8C4);
   color: white;
   min-height: 200px;
   padding: 50px 20px;
 }
-
-
 /* Pause animation on hover */
-
-
 .about-us {
-  background-image: linear-gradient(to bottom, rgba(66, 73, 91, 0.94), rgba(99, 99, 99, 0.94)), url("asset/images/footerbg.png");
+  background-image: linear-gradient(to bottom, rgba(66, 73, 91, 0.94), rgba(99, 99, 99, 0.94)), url("asset/images/brand/footerbg.png");
   background-repeat: no-repeat;
   background-size: cover; /* Optional: Adjust as needed */
   background-attachment: fixed;
@@ -379,7 +291,6 @@ Add hover effect on the parent container */
   min-height: 400px;
   padding: 50px 0;
 }
-
 
 .iso-logo {
   max-width: 150px;
@@ -391,7 +302,6 @@ Add hover effect on the parent container */
   margin-bottom: 10px;
 }
 
-
 .flag {
   width: 25px;
   margin-right: 10px;
@@ -400,11 +310,7 @@ Add hover effect on the parent container */
 .contact-list li {
   margin-bottom: 15px;
 }
-
-
-
 /* Pages/Section CSS End */
-
 
 /* Footer CSS Start */
 .footer ul li a{
@@ -413,14 +319,6 @@ Add hover effect on the parent container */
 .footer ul li a:hover{
   color: #f4b400;
 }
-
-/* .footer {
-  background-color: #1c1f26;
-  padding: 10px 0%;
-  text-align: center;
-} */
-
-
 
 .social-icons a  {
 
@@ -435,6 +333,254 @@ Add hover effect on the parent container */
 
 
 
+
+/* Common CSS Section Strat*/
+.commonbg-alignment {
+  background-size: cover;
+  min-height: 320px;
+  position: relative;
+
+}
+.overlay-alignment {
+  padding: 60px 0;
+  background-attachment: fixed;
+  position: relative;
+}
+.dot-icon {
+  color: #ff9800;
+  font-size: 12px;
+}
+
+.icon {
+  font-size: 30px;
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.dash {
+  display: inline-block; /* Makes it behave like a block element but inline */
+  border-bottom: 2px solid rgba(100, 100, 102, 0.41);
+  padding: 0 50px;
+  margin-top: 10px; /* Space above */
+  margin-bottom: 10px; /* Space below */
+  width: fit-content; /* Ensures the underline fits the content */
+}
+
+.highlight {
+  color: #42495b;
+}
+/* Common CSS SEction End*/
+
+/* Ai section CSS Start*/
+.intelligence-bg {
+  background: url('asset/images/brand/aibg.jpg') no-repeat center center/cover ;
+}
+
+.usecase-bg {
+  background: url('asset/images/brand/aiusecase.png') no-repeat center center/cover;
+}
+.service-box img{
+  transform: rotate(-45deg);
+  width: 33px;
+  vertical-align: -4px;
+}
+/* Ai section CSS End*/
+
+/* Full Life-Cycle Development CSS Start */
+.unique-bg-1 {
+  background: url('asset/images/brand/lifecyc-bg.jpg') no-repeat center center/cover;
+}
+
+.bespoke-bg {
+  background: url('asset/images/brand/Bespoke-bg.jpg') no-repeat center center/cover;
+}
+
+/* Make tab transition smoother */
+.approach-tab .rounded-circle {
+  width: 70px;
+  height: 70px;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+/* Active tab styling */
+.approach-tab.active .rounded-circle {
+  background-color: #fe9b00 !important;
+  border: none;
+}
+
+/* Inactive tab styling */
+.approach-tab:not(.active) .rounded-circle {
+  background-color: transparent;
+  border: 1px solid #6c757d;
+}
+
+/* Full Life-Cycle Development CSS End */
+
+
+/* Analytics Section css start from here */
+.analytic-bg {
+  background: url('asset/images/brand/analyticslive.jpg') no-repeat center center/cover;
+  
+}
+
+.advAnalytics-bg {
+  background: url('asset/images/brand/anlyticsmiddle.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+/* Hide triangle by default */
+.nav-pills .nav-link::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 8px solid transparent; /* Triangle */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+/* Show and color the triangle when active */
+.nav-pills .nav-link.active::after {
+  border-left-color: #5A5A5A ; /* Triangle inherits black color */
+  opacity: 1;
+}
+
+.nav-pills .nav-link {
+  background-color: #FFFFFF; /* White background for inactive buttons */
+  color: black; /* Black text for inactive buttons */
+  border-radius: 0; /* Remove border radius */
+  margin-bottom: 1px; /* Small spacing between buttons */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #5A5A5A ; /* Gray background for active button */
+  color: #FFFFFF ; /* White text for active button */
+}
+
+/* Analytical CSS End */
+
+/* Robotic and Automation CSS Start */
+.auto-bg {
+  background: url('asset/images/brand/rpahdr1.jpg') no-repeat center center;
+}
+
+.robotic-bg {
+  background: url('asset/images/brand/rpa.png') no-repeat center center/cover;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+/* Add spacing between images */
+.image-top {
+  margin-right: 40%;
+}
+/* Styling for industry cards */
+.industries {
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  min-height: 350px;
+}
+/* List items */
+.industries ul li {
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+  font-weight: 300;
+  text-align: left;
+  position: relative;
+  padding: 4px; /* Space for the arrow */
+  line-height: 1.4;
+}
+/* Robotic and Automation CSS End */
+
+/* Cloud Computing CSS start */
+
+.cloud-computing-bg {
+  background: url('asset/images/brand/cloudcomputing.jpg') no-repeat center center/cover;
+}
+/* Cloud Computing Section End */
+
+
+/* blockchain secttion CSS Start */
+.blockchain-bg {
+  background-image: url('asset/images/brand/blk.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.smart-bg {
+  background: url('asset/images/brand/blockchain.jpg') no-repeat center center/cover;
+}
+
+/* blockchain secttion CSS End */
+
+.digital-bg {
+  background: url('asset/images/brand/dgl.jpg') no-repeat center center/cover; 
+}
+
+.digitalstrategy-bg {
+  background: url('/asset/images/brand/digitalstrategy.jpg') no-repeat center center/cover !important;
+}
+
+.mt-5 {
+  margin-top: 50px !important;
+}
+
+.mb-4 {
+  margin-bottom: 40px !important;
+}
+
+
+
+.enterpriseboat-bg {
+  background: url('asset/images/brand/chatbts.jpg') no-repeat center/cover;
+}
+
+.benefits-bg {
+  background: url('/asset/images/brand/customizedchatbots.jpg') no-repeat center center/cover !important;
+  min-height: 600px;
+}
+
+.ls-2 {
+  letter-spacing: 0.08rem;
+}
+
+.enterAppl-bg {
+  background: url('/asset/images/brand/entapp.jpg') no-repeat center center/cover !important;
+}
+
+.custom-list li {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px;
+  background: #eeee;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-align: left;
+  width: 100%;
+}
+
+
+/* Contact CSS start */
+.contact-bg {
+  background: url('asset/images/brand/contacthdr.jpg') no-repeat center center/cover;
+  
+}
+
+.contact-form {
+  background: #ffff;  
+}
+
+.contact-form button {
+  background-color: #6dc36d;
+  color:#ffff;
+}
+
+.contact-form button:hover {
+  background-color: #5aa75a;
+  color: #ff9800;
+}
+/* Contact Section CSS End */
 
 
 

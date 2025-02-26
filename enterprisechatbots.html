@@ -9,13 +9,12 @@
     <!-- Bootstrap CSS Start -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <!-- Bootstrap CSS End-->
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
     <!-- Font-Awesome Link Start -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
     <!-- Font-Awesome Link Start -->
 
     <!-- Custom CSS Start -->
@@ -25,8 +24,52 @@
 </head>
 
 <body>
-    <header></header>
-    <section class="enterprise-bg">
+    <header>
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg bg-transparent navbar-fixed-top py-1">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="asset/images/brand/logo.png" class="responsive-img branding" alt="Logo">
+                    <img src="asset/images/brand/logo-dark.png" class="scrolled-logo" alt="Scrolled Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <span></span><span></span><span></span>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">WHAT WE
+                                DO</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="ai.html">Artificial Intelligence</a></li>
+                                <li><a class="dropdown-item" href="flcd.html">Full Life-Cycle Development</a></li>
+                                <li><a class="dropdown-item" href="analytics.html">Advance Analytics & Big Data</a></li>
+                                <li><a class="dropdown-item" href="automation.html">Robotic Process Automation</a></li>
+                                <li><a class="dropdown-item" href="cloud.html">Cloud Computing</a></li>
+                                <li><a class="dropdown-item" href="blockchain.html">Blockchain</a></li>
+                                <li><a class="dropdown-item" href="digital.html">Digital Strategy</a></li>
+                                <li><a class="dropdown-item" href="enterprisechatbots.html">Enterprise Chat Bots</a>
+                                </li>
+                                <li><a class="dropdown-item" href="enterpriseapplication.html">Enterprise
+                                        Application</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">JOIN OUR TEAM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+
+
+    </header>
+    <section class="enterpriseboat-bg commonbg-alignment">
 
     </section>
 
@@ -34,7 +77,8 @@
         <div class="container">
 
             <div class="col-12 d-flex align-items-center">
-                <h2 class="contact-header pe-md-3 border-md-end mt-4">Enterprise Chat Bots<span class="icon">●</span>
+                <h2 class="contact-header pe-md-3 border-md-end mt-4">Enterprise Chat Bots<span class="dot-icon"><i
+                            class="fa fa-circle" aria-hidden="true"></i></span>
                 </h2>
                 <p>Bots are the new apps! Build custom AI-Powered chatbots for your enterprise to create smarter
                     business workflows, improve employee productivity, reduce operational costs, and enhance
@@ -66,8 +110,9 @@
                 <div class="col-md-3 text-center service-box text-justify">
                     <i class="bi-android2 icon mx-3"></i>
                     <h5 class="my-2 mx-3">Increased Adoption</h5>
-                    <p class="text-justify mt-3 lh-base ls-2">Conversational User Interfaces are easier to learn & use and more fun to use to fetch user
-                        traditional forms and UI 
+                    <p class="text-justify mt-3 lh-base ls-2">Conversational User Interfaces are easier to learn & use
+                        and more fun to use to fetch user
+                        traditional forms and UI
                         No special training needed as its like chatting with another person. <br>
                         Users develop bond with the Bot over time, akin to another human. No other app can do this</p>
 
@@ -75,8 +120,9 @@
                 <div class="col-md-3 text-center service-box text-justify">
                     <i class="bi-lightbulb icon fa-2x mx-3"></i>
                     <h5 class="my-2 mx-3">IPersonalization & Self learning</h5>
-                    <p class="text-justify lh-base ls-2 "> Bots always know who it is conversing with, this inofrmation can be used to fetch user specific
-                        content as well as make the conversations more personal 
+                    <p class="text-justify lh-base ls-2 "> Bots always know who it is conversing with, this inofrmation
+                        can be used to fetch user specific
+                        content as well as make the conversations more personal
                         Integration wiht Machine Learning service make the Bot better with time with minimal human
                         intervention. Also custom ML algorithms can be developed for improved understanding of the
                         business.</p>
@@ -93,9 +139,9 @@
             </div>
         </div>
     </section>
-    <section class="what-makes-us-different digitalstrategy-bg">
+    <section class="what-makes-us-different digitalstrategy-bg overlay-alignment">
         <div class="container text-center ">
-            
+
 
 
             <!-- Features Row -->
@@ -206,232 +252,294 @@
 
     <section class="py-5 bg-light">
         <div class="container">
-            <div>
+            <div class="text-center">
                 <h4 class="mt-3 fw-medium fs-2">Features</h4>
                 <span class="dash"></span>
+                
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-book custom-icon"></i>
+                    <div class=" card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-book icon"></i>
                         <h5>Knowledge Base</h5>
-                        <p>Every bot building platform requires a knowledge base. It acts like a nerve center for your
-                            bots.</p>
+                        <p class="mt-auto">Every bot building platform requires a knowledge base. IConnect's knowledge base acts like a
+                            nerve center for your bots so that they can respond to supported questions and operations
+                            that a user requests from it.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-comments custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-comments icon"></i>
                         <h5>Conversation System</h5>
-                        <p>We use Message Definition Language (MDL) to define bot responses for better interaction.</p>
+                        <p class="mt-auto">As bots thrive on the conversational aspect of communication, it is imperative to define
+                            their responses. We use Message Definition Language(MDL) to define bot responses.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-shield-alt custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-shield-alt icon"></i>
                         <h5>Security</h5>
-                        <p>We offer multi-factor authentication, user authorization, and other security layers.</p>
+                        <p class="mt-auto">We have five types/levels of authorization:</p>
+                        <p class="mt-auto">User Authentication and User Authorization, Multi-factor Authentication, One Time Authorization, Channel Authorization</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-bolt custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-bolt icon"></i>
                         <h5>Triggers</h5>
-                        <p>Bots can initiate conversations with users based on business rules and triggers.</p>
+                        <p class="mt-auto">Bots can initiate a conversation with users based on business rules and/or triggers. The
+                            possibilities of having triggers is numerous.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-users custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-users icon"></i>
                         <h5>Administration</h5>
-                        <p>Bots need to be managed with advanced modules, modes, and logs.</p>
+                        <p class="mt-auto">This feature lets the bot guide the user during the course of the conversation by providing
+                            helpful hints and options. By carefully designing the bot's conversations, the user can feel
+                            in control of the bot, and you can design the bot to take the user in a particular direction
+                            that you want.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="bi bi-chat-dots custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="bi bi-chat-dots icon"></i>
                         <h5>Guided Conversation</h5>
-                        <p>The bot helps guide users during conversations with hints and options.</p>
+                        <p class="mt-auto">Create personas with this feature. Having a persona goes a long way in its adoption. The
+                            personas let the user think that he is talking to an actual human being rather than a
+                            software.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-book custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-book icon"></i>
                         <h5>Knowledge Base</h5>
-                        <p>Every bot building platform requires a knowledge base. It acts like a nerve center for your
-                            bots.</p>
+                        <p class="mt-auto">Error messages are often confusing and meaningless. Error handling makes bots more graceful
+                            and provides detailed information if the user is stuck at any place.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-comments custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-comments icon"></i>
                         <h5>Conversation System</h5>
-                        <p>We use Message Definition Language (MDL) to define bot responses for better interaction.</p>
+                        <p class="mt-auto">Error messages are often confusing and meaningless. Error handling makes bots more graceful
+                            and provides detailed information if the user is stuck at any place.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="custom-card">
-                        <i class="fas fa-shield-alt custom-icon"></i>
+                    <div class="card border rounded-3 p-4 text-center shadow-sm bg-white h-100 d-flex flex-column">
+                        <i class="fas fa-shield-alt icon"></i>
                         <h5>Security</h5>
-                        <p>We offer multi-factor authentication, user authorization, and other security layers.</p>
+                        <p class="mt-auto">This feature provides industry-standard means of integrating with other applications and
+                            databases. You can integrate your bot with practically any LOB systems and extract data from
+                            it.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <section class="what-makes-us-different text-white py-5 benefits-bg">
         <div class="container text-center">
-            <div class="row ">
-                <div class="content-box ">
-                    <h2 class="fs-2 fw-bolder mb-2">Benefits</h2>
+            <div class="row">
+                <div class="content-box">
+                    <h2 class="fs-2 fw-bolder mt-3">Benefits</h2>
                     <span class="dash"></span>
-                    <div class=" featurebox d-grid gap-5 justify-content-center px-5">
-                        <div class="text-justify text-light fw-medium mb-5 ls-2 fs-5 "> Complete control & monitoring of bots</div>
-                        <div class="text-justify text-light fw-medium mb-5 ls-2 fs-5"> Deployment of secure AI assisants that cause zero security of privacy
-                            issues</div>
-                        <div class="text-justify text-light fw-medium mb- ls-2 fs-5">Flexibility to choose & Integrate the best AI service as they mature
-                            Bots can be used by unlimited users</div>
-                        <div class="text-justify text-light fw-medium mb-5 ls-2 fs-5">Extensive customization of bots according to ongoing organizational
-                            requirements</div>
-                        <div class="text-justify text-light fw-medium mb-5 ls-2 fs-5">Building of bots which can be deployed on both onpermise and cloud
-                            environments</div>
-                        <div class="text-justify text-light fw-medium mb-5 ls-2 fs-5"> One time fee for each bot implementation </div>
+                    <div class="featurebox row g-5 px-5 h-100 mt-2"> 
+                        <div class="col-12 col-md-4 d-flex align-items-stretch">
+                            <div class="text-justify text-light fw-medium ls-2 fs-5"> 
+                                Complete control & monitoring of bots 
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-stretch">
+                            <div class="text-justify text-light fw-medium ls-2 fs-5"> 
+                                Deployment of secure AI assistants that cause zero security or privacy issues 
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-stretch">
+                            <div class="text-justify text-light fw-medium ls-2 fs-5"> 
+                                Flexibility to choose & integrate the best AI service as they mature. Bots can be used by unlimited users. 
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-stretch">
+                            <div class="text-justify text-light fw-medium ls-2 fs-5"> 
+                                Extensive customization of bots according to ongoing organizational requirements 
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-stretch">
+                            <div class="text-justify text-light fw-medium ls-2 fs-5"> 
+                                Building of bots which can be deployed on both on-premise and cloud environments 
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex align-items-stretch">
+                            <div class="text-justify text-light fw-medium ls-2 fs-5"> 
+                                One-time fee for each bot implementation 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </section>
     
-  <!-- About Us Section -->
-  <footer class="about-us py-5 aboutus">
-    <div class="container">
-      <div class="row">
-        <!-- About Us Column -->
-        <div class="col-md-4">
-          <h4 class="text-light">ABOUT US</h4>
-          <span class="dash text-bg-light"></span>
-          <p class="text-light">
-            We are a Business Technology Solution Provider and a team of passionate,
-            purpose-led individuals. We think disruptively to deliver technology to
-            address our clients' toughest challenges. Our solutions are built for
-            growth, profitability, and customer delight.
-          </p>
-          <img src="asset/images/brand/ISO27001.png" alt="ISO Certified" class="iso-logo">
+
+    <!-- About Us Section -->
+    <footer class="about-us py-5 aboutus">
+        <div class="container">
+            <div class="row">
+                <!-- About Us Column -->
+                <div class="col-md-4">
+                    <h4 class="text-light">ABOUT US</h4>
+                    <span class="dash text-bg-light"></span>
+                    <p class="text-light">
+                        We are a Business Technology Solution Provider and a team of passionate,
+                        purpose-led individuals. We think disruptively to deliver technology to
+                        address our clients' toughest challenges. Our solutions are built for
+                        growth, profitability, and customer delight.
+                    </p>
+                    <img src="asset/images/brand/ISO27001.png" alt="ISO Certified" class="iso-logo">
+                </div>
+
+                <!-- Services Column -->
+                <div class="col-md-4 footer">
+                    <h4 class="text-light">SERVICES</h4>
+                    <span class="dash text-bg-light"></span>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none"><i class="fas fa-angle-right"></i> Artificial
+                                Intelligence</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Full Life-Cycle
+                                Development</a></li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Advanced
+                                Analytics & Big Data</li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Robotic Process
+                                Automation</a></li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Cloud
+                                Computing</a></li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Blockchain</a>
+                        </li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Digital
+                                Strategy</a></li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Enterprise Chat
+                                Bots</a></li>
+                        <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i>
+                                Enterprise
+                                Applications</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Us Column -->
+                <div class="col-md-4">
+                    <h4 class="text-light">CONTACT US</h4>
+                    <span class="dash text-bg-light mx-4"></span>
+                    <ul class="list-unstyled contact-list">
+                        <!-- USA -->
+                        <li class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <img src="asset/images/brand/mappoint.png" class="flag" width="30">
+                                <strong class="d-block text-light">USA</strong>
+                            </div>
+                            <div class="text-light">
+                                841, Clubridge Ter,<br> Chester, VA 23836 <br>
+                                <i class="fas fa-phone text-light"></i class="text-light"> +1 331 205 7510
+                            </div>
+                        </li>
+
+                        <!-- UAE -->
+                        <li class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <img src="asset/images/brand/uae.png" class="flag" width="30">
+                                <strong class="d-block text-light">UAE</strong>
+                            </div>
+                            <div class="text-light">
+                                Sheik Zayeed Road,<br> Dubai P.O 261
+                            </div>
+                        </li>
+
+                        <!-- UK -->
+                        <li class="d-flex align-items-start mb-3">
+                            <div class="me-3">
+                                <img src="asset/images/brand/uk.png" class="flag" width="30">
+                                <strong class="d-block text-light">UK</strong>
+                            </div>
+                            <div class=" text-light">
+                                5 Clements Court, Clement Lane <br> Essex, IG1 2QY <br>
+                                <i class="fas fa-phone text-light"></i class="text-light"> +44 20 8553 4076
+                            </div>
+                        </li>
+
+                        <!-- India -->
+                        <li class="d-flex align-items-start">
+                            <div class="me-3">
+                                <img src="asset/images/brand/india.png" class="flag" width="30">
+                                <strong class="d-block text-light">IND</strong>
+                            </div>
+                            <div class="text-light">
+                                Ramakrupa Towers, Plot # 76 & 76 A,<br>
+                                Jubilee Enclave, Madhapur,<br>
+                                Lane next to Shilparamam,<br>
+                                Hyderabad, India - 500081 <br>
+                                <i class="fas fa-phone text-light"></i class="text-light"> +91 40-68156789
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
+    </footer>
 
-        <!-- Services Column -->
-        <div class="col-md-4 footer">
-          <h4 class="text-light">SERVICES</h4>
-          <span class="dash text-bg-light"></span>
-          <ul class="list-unstyled">
-            <li><a href="#" class="text-decoration-none"><i class="fas fa-angle-right"></i> Artificial Intelligence</a>
-            </li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Full Life-Cycle
-                Development</a></li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Advanced
-                Analytics & Big Data</li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Robotic Process
-                Automation</a></li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Cloud
-                Computing</a></li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Blockchain</a>
-            </li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Digital
-                Strategy</a></li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Enterprise Chat
-                Bots</a></li>
-            <li><a href="#" class="text-decoration-none footer_links"><i class="fas fa-angle-right"></i> Enterprise
-                Applications</a></li>
-          </ul>
+    <!-- Footer Section -->
+
+    <!-- Copyright -->
+    <section class="bg-dark py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 text-light">
+                    Copyright © 2018 iconnectit.net, All Rights Reserved.
+                </div>
+                <div class="col-md-4">
+                    <a href="#" class="text-light px-1"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-light px-1"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light px-1"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="text-light px-1"><i class="fab fa-google-plus-g"></i></a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Contact Us Column -->
-        <div class="col-md-4">
-          <h4 class="text-light">CONTACT US</h4>
-          <span class="dash text-bg-light mx-4"></span>
-          <ul class="list-unstyled contact-list">
-              <!-- USA -->
-              <li class="d-flex align-items-start mb-3">
-                  <div class="me-3">
-                      <img src="asset/images/brand/mappoint.png" class="flag" width="30">
-                      <strong class="d-block text-light">USA</strong>
-                  </div>
-                  <div class="text-light">
-                      841, Clubridge Ter,<br> Chester, VA 23836 <br>
-                      <i class="fas fa-phone text-light"></i class="text-light"> +1 331 205 7510
-                  </div>
-              </li>
-      
-              <!-- UAE -->
-              <li class="d-flex align-items-start mb-3">
-                  <div class="me-3">
-                      <img src="asset/images/brand/uae.png" class="flag" width="30">
-                      <strong class="d-block text-light">UAE</strong>
-                  </div>
-                  <div class="text-light">
-                      Sheik Zayeed Road,<br> Dubai P.O 261
-                  </div>
-              </li>
-      
-              <!-- UK -->
-              <li class="d-flex align-items-start mb-3">
-                  <div class="me-3">
-                      <img src="asset/images/brand/uk.png" class="flag" width="30">
-                      <strong class="d-block text-light">UK</strong>
-                  </div>
-                  <div class=" text-light">
-                      5 Clements Court, Clement Lane <br> Essex, IG1 2QY <br>
-                      <i class="fas fa-phone text-light"></i class="text-light"> +44 20 8553 4076
-                  </div>
-              </li>
-      
-              <!-- India -->
-              <li class="d-flex align-items-start">
-                  <div class="me-3">
-                      <img src="asset/images/brand/india.png" class="flag" width="30">
-                      <strong class="d-block text-light">IND</strong>
-                  </div>
-                  <div class="text-light">
-                    Ramakrupa Towers, Plot # 76 & 76 A,<br>
-                    Jubilee Enclave, Madhapur,<br>
-                    Lane next to Shilparamam,<br>
-                    Hyderabad, India - 500081 <br>
-                      <i class="fas fa-phone text-light"></i class="text-light"> +91 40-68156789
-                  </div>
-              </li>
-          </ul>
-      </div>
-      
-      </div>
-    </div>
-  </footer>
+    <!--  Bootstrap JavaScript Start -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!--  Bootstrap JavaScript End-->
 
-  <!-- Footer Section -->
+    <!-- Custom JavaScript Strat -->
+    <script>
 
-  <!-- Copyright -->
-  <section class="bg-dark py-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 text-light">
-          Copyright © 2018 iconnectit.net, All Rights Reserved.
-        </div>
-        <div class="col-md-4">
-          <a href="#" class="text-light px-1"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-light px-1"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-light px-1"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-light px-1"><i class="fab fa-google-plus-g"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
+        // Navbar Scroll Effect
+        document.addEventListener("DOMContentLoaded", function () {
+            const navbar = document.querySelector(".navbar");
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            window.addEventListener("scroll", function () {
+                const scrollPosition = window.scrollY;
 
+                // Change navbar style when scrolled down (e.g., 50px)
+                if (scrollPosition > 50) {
+                    navbar.classList.add("scrolled");
+                } else {
+                    navbar.classList.remove("scrolled");
+                }
+            });
+        });
 
-
+    </script>
 </body>
 
 </html>
