@@ -1,59 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
 
-/* Common CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-family: "Montserrat", serif;
+/*  General Styles Optimization
+   ============================= */
+ * {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
 }
-
+  
+html {
+      scroll-behavior: smooth;
+}
 body {
-  line-height: 1.6rem;
-  overflow-x: hidden;
+    font-family: "Montserrat", serif;
+    line-height: 1.6rem;
+    overflow-x: hidden;
 }
-
-/* Header Hero Section */
+/*  Hero Section Optimization
+   ============================= */
 .hero-section {
-  background: url('asset/images/brand/img-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+              url('asset/images/brand/img-bg.jpg') center/cover no-repeat;
+  position: relative;
 }
 
-.hero-section::after {
-  content: "";
+.hero-content { 
+  width: 100%;
+  position: relative;
+}
+
+.hero-heading {
+  font-size: 58px;
+ 
+}
+.hero-heading span {
+  background: rgba(255, 102, 0, 0.7);
+  padding: 0px 30px 2px;
+  display: inline-block;
+}
+
+.hero-description span {
+  background: rgba(255, 102, 0, 0.7);
+  padding: 5px 15px;
+  display: inline-block;
+}
+
+.hero-item {
+  opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background: url('asset/images/brand/matebg.png') center/cover no-repeat;
-  opacity: 0.6;
+  top: 0; 
+  left: 50%;
+  transform: translateX(-50%); 
+  transition: opacity 0.8s ease-in-out;
 }
 
-.hero-content {
-  text-align: center;
-  color: white;
-  width: 100%;
-  padding: 50px 0;
+.hero-item.active {
+  opacity: 1;
+  position: absolute; /* Keeps all items stacked */
 }
 
 .branding {
   height: 60px;
   border-radius: 8px;
+ 
 }
-
-.content-hero-slide {
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-}
-.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Navigation  CSS Start*/
+/* Navbar Optimization
+   ============================= */
 .navbar {
   position: fixed;
   top: 0;
@@ -62,9 +75,11 @@ body {
   background: transparent;
   transition: background-color 0.3s ease-in-out;
 }
-
-.navbar-togller{
-  border: 1px solid #d7771d;
+ .navbar-nav {
+  gap: 15px; /* Adds space between nav items */
+} 
+.navbar-toggler {
+  border: 2px solid #d7771d;
 }
 
 .navbar.scrolled {
@@ -72,13 +87,16 @@ body {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   color: black;
 }
-.navbar.scrolled .nav-link{
+
+.navbar.scrolled .nav-link {
   color: black;
 }
 
 .navbar.scrolled .nav-link:hover {
-  color: #d7771d !important; /* Keeps hover effect */
+  color: #d7771d !important;
+ 
 }
+
 .navbar-nav .nav-link {
   font-size: 14px;
   font-weight: bold;
@@ -88,10 +106,18 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #d7771d;
+  color: #d7771d !important;
   text-decoration: underline;
+  transition: color 0.3s;
 }
-.dropdown-item:hover{
+.dropdown-item{
+  font-size: 14px;
+  font-weight: 500;
+  padding: 9px 20px;
+  color: #333;
+
+}
+.dropdown-item:hover {
   background: linear-gradient(to right, rgba(166, 208, 51, 0.68), rgba(47, 198, 254, 0.74));
 }
 
@@ -102,6 +128,7 @@ body {
 
 .navbar-brand {
   position: relative;
+  margin-left: auto;
 }
 
 .navbar-brand .scrolled-logo {
@@ -118,56 +145,17 @@ body {
 .navbar.scrolled .navbar-brand .scrolled-logo {
   opacity: 1;
 }
-/* Scroll */
-::-webkit-scrollbar {
-  width: 10px;  
-}
-/* Track */
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px   #00F260;
-  border-radius: 6px;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  /* background:#feba05; */
-  -webkit-border-radius: 6px;
-    border-radius: 6px;
-    background: #00F260;
-    background: -webkit-linear-gradient(to bottom, #fea400, #00F260);
-    background: linear-gradient(to bottom, #fea400, #00F260);
-    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-} 
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(215,Â 62,Â 2);
-}
-/* Navigation  CSS End*/
-
-/* Key Offerings */
-.key-offering {
-  background-color: #fff;
-  padding: 80px 0;
-  text-align: center;
-}
-
-.section-heading {
-  font-size: 28px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  position: relative;
-  display: inline-block;
-}
-
-.section-heading::after {
-  content: "";
-  display: block;
-  width: 60px;
-  height: 2px;
-  background: #333;
-  margin: 10px auto 0;
-}
+/* Scrollbar Styling Optimization
+   ============================= */
+   ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ff9b20, #00F260);
+    border-radius: 8px;
+  }
+/* Key Offerings
+================= */
 
 .offer-img {
   width: 70px;
@@ -180,12 +168,10 @@ body {
 .offer-item:hover .offer-img {
   border: 1px solid #ff9b20;
 }
-
 .offer-text {
-  font-size: 14px;
-  font-weight: bold;
   color: #333;
-  text-transform: uppercase;
+  padding: 12px;
+  border-radius: 3px;
   margin: 0;
   transition: opacity 0.4s ease-in-out, color 0.4s ease-in-out;
 }
@@ -193,8 +179,8 @@ body {
 .offer-item:hover .offer-text {
   color: #ff9b20;
 }
- 
-/* Client Section CSS Start */
+/* Client Section CSS Start
+=========================== */
 #testimonial__video {
   position: absolute;
   top: 0;
@@ -204,13 +190,15 @@ body {
   object-fit: cover;
   z-index: -1;
 }
+
 .clientssec {
   position: relative;
   overflow: hidden;
-  background:rgba(0, 0, 0, 0.8)center/cover no-repeat; /* Replace with a valid image */
-  
+  background: rgba(0, 0, 0, 0.8)center/cover no-repeat
 }
-/* Client Section CSS End */
+
+/* Overlay Section CSS start
+============================*/
 .what-makes-us-different {
   background: url('/asset/images/brand/makeusdiifferenrt.png') no-repeat center center/cover;
   position: relative;
@@ -225,7 +213,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.65); /* Dark overlay */
+  background: rgba(0, 0, 0, 0.65);
 }
 
 .what-makes-us-different .container {
@@ -238,23 +226,16 @@ body {
   border-radius: 10px;
 
 }
-
-
 .content-box img {
   width: 50px;
   height: 50px;
 }
 
-@keyframes slide-animation {
-  from { transform: translateX(100%); }
-  to { transform: translateX(-100%); }
-}
-
-
 @media (max-width: 992px) {
   .navbar-toggler {
-    border: 2px solid #d7771d!important;
-    padding: 5px; /* Optional: Adjust padding for better spacing */
+    border: 2px solid #d7771d !important;
+    padding: 5px;
+    /* Optional: Adjust padding for better spacing */
   }
 
   .navbar-toggler-icon {
@@ -270,7 +251,8 @@ body {
     display: block;
     width: 100%;
     height: 1.4px;
-    background-color:#d7771d; /* Change line color */
+    background-color: #d7771d;
+    /* Change line color */
     transition: all 0.3s ease-in-out;
   }
 }
@@ -281,11 +263,16 @@ body {
   min-height: 200px;
   padding: 50px 20px;
 }
-/* Pause animation on hover */
+.btn-outline-light:hover {
+  color:#ff9800 !important;
+}
+
+/* Footer Section
+================== */
 .about-us {
   background-image: linear-gradient(to bottom, rgba(66, 73, 91, 0.94), rgba(99, 99, 99, 0.94)), url("asset/images/brand/footerbg.png");
   background-repeat: no-repeat;
-  background-size: cover; /* Optional: Adjust as needed */
+  background-size: cover;
   background-attachment: fixed;
   position: relative;
   min-height: 400px;
@@ -301,7 +288,6 @@ body {
   font-size: 15px;
   margin-bottom: 10px;
 }
-
 .flag {
   width: 25px;
   margin-right: 10px;
@@ -310,42 +296,42 @@ body {
 .contact-list li {
   margin-bottom: 15px;
 }
-/* Pages/Section CSS End */
-
-/* Footer CSS Start */
-.footer ul li a{
-  color:#ffffff;
+.footer ul li a {
+  color: #ffffff;
 }
-.footer ul li a:hover{
+
+.footer ul li a:hover {
   color: #f4b400;
 }
-
-.social-icons a  {
-
-  
-  transition: 0.5s;
+ /* Copy Right Section 
+ =====================*/
+.social-symbol a {
+  transition: color 0.5s ease-in-out;
+}
+.social-symbol a:nth-child(1):hover i,
+.social-symbol a:nth-child(2):hover i,
+.social-symbol a:nth-child(3):hover i {
+  color: #1358cf !important; /* Common hover color */
+}
+.social-symbol a:nth-child(4):hover i {
+  color: red !important;
 }
 
-.social-icons a :hover {
-  color:#1358cf;
-}
-/* Footer CSS End */
-
-
-
-
-/* Common CSS Section Strat*/
+/* Common CSS Section Strat
+===========================*/
 .commonbg-alignment {
   background-size: cover;
   min-height: 320px;
   position: relative;
 
 }
+
 .overlay-alignment {
   padding: 60px 0;
   background-attachment: fixed;
   position: relative;
 }
+
 .dot-icon {
   color: #ff9800;
   font-size: 12px;
@@ -358,35 +344,36 @@ body {
 }
 
 .dash {
-  display: inline-block; /* Makes it behave like a block element but inline */
+  display: inline-block;
   border-bottom: 2px solid rgba(100, 100, 102, 0.41);
   padding: 0 50px;
-  margin-top: 10px; /* Space above */
-  margin-bottom: 10px; /* Space below */
-  width: fit-content; /* Ensures the underline fits the content */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: fit-content; 
 }
 
 .highlight {
   color: #42495b;
 }
-/* Common CSS SEction End*/
 
-/* Ai section CSS Start*/
+/* Ai section CSS Start
+=========================*/
 .intelligence-bg {
-  background: url('asset/images/brand/aibg.jpg') no-repeat center center/cover ;
+  background: url('asset/images/brand/aibg.jpg') no-repeat center center/cover;
 }
 
 .usecase-bg {
   background: url('asset/images/brand/aiusecase.png') no-repeat center center/cover;
 }
-.service-box img{
+
+.service-box img {
   transform: rotate(-45deg);
   width: 33px;
   vertical-align: -4px;
 }
-/* Ai section CSS End*/
 
-/* Full Life-Cycle Development CSS Start */
+/* Full Life-Cycle Development CSS Start 
+========================================*/
 .unique-bg-1 {
   background: url('asset/images/brand/lifecyc-bg.jpg') no-repeat center center/cover;
 }
@@ -395,32 +382,26 @@ body {
   background: url('asset/images/brand/Bespoke-bg.jpg') no-repeat center center/cover;
 }
 
-/* Make tab transition smoother */
 .approach-tab .rounded-circle {
   width: 70px;
   height: 70px;
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
-/* Active tab styling */
 .approach-tab.active .rounded-circle {
   background-color: #fe9b00 !important;
   border: none;
 }
-
-/* Inactive tab styling */
 .approach-tab:not(.active) .rounded-circle {
   background-color: transparent;
   border: 1px solid #6c757d;
 }
 
-/* Full Life-Cycle Development CSS End */
-
-
-/* Analytics Section css start from here */
+/* Analytics Section CSS 
+=========================*/
 .analytic-bg {
   background: url('asset/images/brand/analyticslive.jpg') no-repeat center center/cover;
-  
+
 }
 
 .advAnalytics-bg {
@@ -428,38 +409,38 @@ body {
   background-attachment: fixed;
 }
 
-/* Hide triangle by default */
+
 .nav-pills .nav-link::after {
   content: '';
   position: absolute;
   left: 100%;
   top: 50%;
   transform: translateY(-50%);
-  border: 8px solid transparent; /* Triangle */
+  border: 8px solid transparent;
   opacity: 0;
   transition: opacity 0.3s;
 }
+
 /* Show and color the triangle when active */
 .nav-pills .nav-link.active::after {
-  border-left-color: #5A5A5A ; /* Triangle inherits black color */
+  border-left-color: #5A5A5A;
   opacity: 1;
 }
 
 .nav-pills .nav-link {
-  background-color: #FFFFFF; /* White background for inactive buttons */
-  color: black; /* Black text for inactive buttons */
-  border-radius: 0; /* Remove border radius */
-  margin-bottom: 1px; /* Small spacing between buttons */
+  background-color: #FFFFFF;
+  color: black;
+  border-radius: 0;
+  margin-bottom: 1px;
 }
 
 .nav-pills .nav-link.active {
-  background-color: #5A5A5A ; /* Gray background for active button */
-  color: #FFFFFF ; /* White text for active button */
+  background-color: #5A5A5A;
+  color: #FFFFFF;
 }
 
-/* Analytical CSS End */
-
-/* Robotic and Automation CSS Start */
+/* Robotic and Automation CSS Start 
+===================================*/
 .auto-bg {
   background: url('asset/images/brand/rpahdr1.jpg') no-repeat center center;
 }
@@ -471,15 +452,16 @@ body {
 .text-justify {
   text-align: justify !important;
 }
-/* Add spacing between images */
+
 .image-top {
   margin-right: 40%;
 }
-/* Styling for industry cards */
+
 .industries {
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   min-height: 350px;
 }
+
 /* List items */
 .industries ul li {
   font-size: 0.85rem;
@@ -487,20 +469,18 @@ body {
   font-weight: 300;
   text-align: left;
   position: relative;
-  padding: 4px; /* Space for the arrow */
+  padding: 4px;
   line-height: 1.4;
 }
-/* Robotic and Automation CSS End */
 
-/* Cloud Computing CSS start */
-
+/* Cloud Computing CSS 
+====================*/
 .cloud-computing-bg {
   background: url('asset/images/brand/cloudcomputing.jpg') no-repeat center center/cover;
 }
-/* Cloud Computing Section End */
 
-
-/* blockchain secttion CSS Start */
+/* blockchain secttion CSS
+===========================*/
 .blockchain-bg {
   background-image: url('asset/images/brand/blk.jpg');
   background-size: cover;
@@ -512,10 +492,10 @@ body {
   background: url('asset/images/brand/blockchain.jpg') no-repeat center center/cover;
 }
 
-/* blockchain secttion CSS End */
-
+/* DigItal Section CSS 
+======================*/
 .digital-bg {
-  background: url('asset/images/brand/dgl.jpg') no-repeat center center/cover; 
+  background: url('asset/images/brand/dgl.jpg') no-repeat center center/cover;
 }
 
 .digitalstrategy-bg {
@@ -530,8 +510,8 @@ body {
   margin-bottom: 40px !important;
 }
 
-
-
+/* EnterpriseBoat Section CSS
+============================== */
 .enterpriseboat-bg {
   background: url('asset/images/brand/chatbts.jpg') no-repeat center/cover;
 }
@@ -546,7 +526,10 @@ body {
 }
 
 .enterAppl-bg {
-  background: url('/asset/images/brand/entapp.jpg') no-repeat center center/cover !important;
+  background-image:url(asset/images/brand/entapp.jpg);
+  min-height: 320px;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 .custom-list li {
@@ -560,32 +543,21 @@ body {
   width: 100%;
 }
 
-
-/* Contact CSS start */
+/* Contact CSS start 
+====================*/
 .contact-bg {
   background: url('asset/images/brand/contacthdr.jpg') no-repeat center center/cover;
-  
-}
 
+}
 .contact-form {
-  background: #ffff;  
+  background: #fff;
 }
-
 .contact-form button {
   background-color: #6dc36d;
-  color:#ffff;
+  color: #fff;
 }
 
 .contact-form button:hover {
   background-color: #5aa75a;
   color: #ff9800;
 }
-/* Contact Section CSS End */
-
-
-
-
-
-
-
-
