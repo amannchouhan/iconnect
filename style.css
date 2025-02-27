@@ -55,6 +55,18 @@ body {
   transition: opacity 0.8s ease-in-out;
 }
 
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('asset/images/brand/matebg.png') center/cover no-repeat;
+  opacity: 0.5;
+}
+
+
 .hero-item.active {
   opacity: 1;
   position: absolute; /* Keeps all items stacked */
@@ -63,8 +75,24 @@ body {
 .branding {
   height: 60px;
   border-radius: 8px;
- 
 }
+
+@media (max-width: 768px) { 
+  .hero-section-home {
+    min-height: 90vh; /* Prevents overflow issues */
+    padding: 20px; /* Adds spacing for smaller screens */
+    text-align: center; /* Ensures alignment */
+  }
+
+  .hero-heading {
+    font-size: 22px !important; /* Reduce heading size */
+  }
+
+  .hero-description {
+    font-size: 14px !important; /* Reduce description size */
+  }
+}
+
 /* Navbar Optimization
    ============================= */
 .navbar {
@@ -256,7 +284,49 @@ body {
     transition: all 0.3s ease-in-out;
   }
 }
+@media (min-width: 768px) {  /* For Medium and Large Screens */
+  .navbar .container-fluid {
+    padding-left: 100px !important; /* Keeps navbar aligned with section content */
+    padding-right: 100px !important; /* Optional: Keeps balance */
+  }
 
+  .navbar-brand {
+    margin-left: 0 !important; /* Ensures logo is left-aligned */
+  }
+}
+
+@media (max-width: 768px) {  /* Mobile View */
+  .navbar .container-fluid {
+    justify-content: flex-start !important; /* Moves navbar items to the left */
+    padding-left: 15px !important; /* Standard mobile spacing */
+  }
+
+  .navbar-brand {
+    margin-left: 0 !important; /* Ensures logo stays at the left */
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-toggler {
+    margin-left: auto !important; /* Keeps toggler on the right */
+  }
+}
+/* Jion Team Section 
+====================*/
+.jionTeam-bg {
+  background: url('asset/images/brand/joinhdr.jpg') no-repeat center center/cover;
+
+}
+/* Connect With Us Section 
+===========================*/
 .connect-with-us {
   background: linear-gradient(to right, #719C2C, #2EA8C4);
   color: white;
@@ -266,7 +336,6 @@ body {
 .btn-outline-light:hover {
   color:#ff9800 !important;
 }
-
 /* Footer Section
 ================== */
 .about-us {
@@ -325,7 +394,6 @@ body {
   position: relative;
 
 }
-
 .overlay-alignment {
   padding: 60px 0;
   background-attachment: fixed;
@@ -366,6 +434,9 @@ body {
   background: url('asset/images/brand/aiusecase.png') no-repeat center center/cover;
 }
 
+.service-box1 img{
+  width: 33px;
+}
 .service-box img {
   transform: rotate(-45deg);
   width: 33px;
@@ -558,6 +629,198 @@ body {
 }
 
 .contact-form button:hover {
-  background-color: #5aa75a;
+ background-color: transparent !important;
   color: #ff9800;
+}
+
+/* Jion Team Section CSS
+========================= */
+
+.crtimeline {
+  position: relative;
+  background: url('asset/images/brand/teambg.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+.timeline {
+  list-style: none;
+  padding: 20px 0 20px;
+  position: relative;
+}
+
+.timeline:before {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  content: " ";
+  width: 3px;
+  background-color: #eeeeee;
+  left: 50%;
+  margin-left: -1.5px;
+}
+
+.timeline > li {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+  content: " ";
+  display: table;
+}
+
+.timeline > li:after {
+  clear: both;
+}
+
+.timeline > li > .timeline-panel {
+  width: 46%;
+  float: left;
+  border: 1px solid #d4d4d4;
+  border-radius: 2px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+}
+
+.timeline > li > .timeline-panel:before {
+  position: absolute;
+  top: 26px;
+  right: -15px;
+  display: inline-block;
+  border-top: 15px solid transparent;
+  border-left: 15px solid #ccc;
+  border-bottom: 15px solid transparent;
+  content: " ";
+}
+
+
+.timeline > li > .timeline-panel:after {
+  position: absolute;
+  top: 27px;
+  right: -14px;
+  display: inline-block;
+  border-top: 14px solid transparent;
+  border-left: 14px solid #fff;
+  border-right: 0 solid #fff;
+  border-bottom: 14px solid transparent;
+  content: " ";
+}
+
+.timeline > li > .timeline-badge {
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 1.4em;
+  text-align: center;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  margin-left: -25px;
+  background-color: #999999;
+  z-index: 100;
+  border-radius: 50%;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+  border-left-width: 0;
+  border-right-width: 15px;
+  left: -15px;
+  right: auto;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+  border-left-width: 0;
+  border-right-width: 14px;
+  left: -14px;
+  right: auto;
+}
+
+.timeline-badge.primary {
+  background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+  background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+  background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+  background-color: #d9534f !important;
+}
+
+.timeline-title {
+  margin-top: 0;
+  color: #f39c12;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+  margin-bottom: 0;
+  text-align: justify;
+}
+
+.timeline-body > p + p {
+  margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+  ul.timeline:before {
+    left: 40px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+    width: calc(100% - 90px);
+  }
+
+  ul.timeline > li > .timeline-badge {
+    left: 15px;
+    margin-left: 0;
+    top: 16px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+    float: right;
+  }
+
+  ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+}
+/* About Section CSS
+===================== */
+.aboutUs-bg{
+  background: url('asset/images/brand/abt.jpg') no-repeat center center/cover;
+}
+
+.abtsrtitle h1 {
+  font-size: 55px;
+  font-weight: 600;
+  color: #c1c1c1;
+}
+
+.abtsrtitle span {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  padding: 0px 140px;
+  border-bottom-color: #888;
 }
