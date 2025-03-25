@@ -19,8 +19,7 @@ body {
 /*  Hero Section Optimization
    ============================= */
 .hero-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-              url('asset/images/brand/img-bg.jpg') center/cover no-repeat;
+  background: url('asset/images/brand/img-bg.jpg') center/cover no-repeat;
   position: relative;
 }
 
@@ -629,7 +628,7 @@ body {
 }
 
 .contact-form button:hover {
- background-color: transparent !important;
+ background-color: #6dc36d !important;
   color: #ff9800;
 }
 
